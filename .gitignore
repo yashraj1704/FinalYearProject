@@ -1,0 +1,328 @@
+# ===========================================
+# RAG Chatbot Project - Comprehensive .gitignore
+# ===========================================
+
+# Environment Variables (CRITICAL - Never commit these)
+.env
+.env.local
+.env.development
+.env.test
+.env.production
+.env.development.local
+.env.test.local
+.env.production.local
+myenv
+*.env
+secrets.json
+config.json
+credentials.json
+api_keys.txt
+openai_api_key.txt
+
+# ===========================================
+# Frontend (React/Vite) Dependencies
+# ===========================================
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+.pnpm-debug.log*
+yarn-integrity
+
+# Frontend Build Outputs
+dist/
+build/
+out/
+.next/
+.nuxt/
+.gatsby/
+.cache/
+.parcel-cache/
+.rpt2_cache/
+.rts2_cache_cjs/
+.rts2_cache_es/
+.rts2_cache_umd/
+
+# Frontend Development
+.vite/
+.eslintcache
+.stylelintcache
+.tsbuildinfo
+*.tsbuildinfo
+
+# ===========================================
+# Backend (Python/FastAPI) Dependencies
+# ===========================================
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+.venv/
+.venv.bak/
+pythonenv/
+.conda/
+conda-meta/
+.conda-meta/
+
+# Python Package Management
+pip-log.txt
+pip-delete-this-directory.txt
+Pipfile.lock
+poetry.lock
+.pdm.toml
+__pypackages__/
+
+# Python Build & Distribution
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Python Testing & Coverage
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.pytest_cache/
+cover/
+.mypy_cache/
+.dmypy.json
+dmypy.json
+.pyre/
+.pytype/
+.pybuilder/
+target/
+
+# ===========================================
+# RAG Chatbot Specific Data Files
+# ===========================================
+
+# Vector Store Data (Large binary files)
+backend/data/index/
+backend/data/embeddings.npy
+backend/data/embeddings/
+backend/data/docstore.jsonl
+backend/data/ids.txt
+backend/data/faiss.index
+backend/data/*.faiss
+backend/data/*.npy
+backend/data/*.jsonl
+
+# Uploaded Documents (User data - privacy concern)
+backend/data/docs/
+backend/data/uploads/
+backend/data/documents/
+backend/data/files/
+backend/data/temp/
+backend/data/cache/
+
+# Model Files (Large ML models)
+*.pkl
+*.pickle
+*.joblib
+*.h5
+*.hdf5
+*.onnx
+*.pt
+*.pth
+*.bin
+*.safetensors
+model/
+models/
+.cache/huggingface/
+transformers_cache/
+sentence_transformers/
+
+# ===========================================
+# IDE & Editor Files
+# ===========================================
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+.spyderproject
+.ropeproject
+.sublime-*
+.atom/
+.brackets/
+
+# ===========================================
+# Operating System Files
+# ===========================================
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+$RECYCLE.BIN/
+
+# ===========================================
+# Logs & Runtime Files
+# ===========================================
+logs/
+*.log
+*.log.*
+runtime/
+pids/
+*.pid
+*.seed
+*.pid.lock
+*.tmp
+*.temp
+tmp/
+temp/
+
+# ===========================================
+# Database Files
+# ===========================================
+*.db
+*.sqlite
+*.sqlite3
+*.sqlite-journal
+*.db-journal
+local_settings.py
+
+# ===========================================
+# Jupyter & IPython
+# ===========================================
+.ipynb_checkpoints
+profile_default/
+ipython_config.py
+*.ipynb
+
+# ===========================================
+# Documentation & Static Assets
+# ===========================================
+docs/_build/
+site/
+public/
+storybook-static/
+.out
+.storybook-out
+
+# ===========================================
+# Package Manager Files
+# ===========================================
+*.tgz
+*.tar.gz
+*.zip
+*.rar
+*.7z
+package-lock.json
+yarn.lock
+
+# ===========================================
+# Large Data Files (Keep only essentials)
+# ===========================================
+*.csv
+*.json
+*.xml
+*.txt
+*.md
+*.pdf
+*.doc
+*.docx
+*.xls
+*.xlsx
+*.ppt
+*.pptx
+!requirements.txt
+!README.md
+!README.txt
+!package.json
+!package-lock.json
+!yarn.lock
+!.gitignore
+!LICENSE
+!CHANGELOG.md
+
+# ===========================================
+# Development & Testing
+# ===========================================
+coverage/
+*.lcov
+.nyc_output
+.cypress/
+playwright-report/
+test-results/
+screenshots/
+videos/
+
+# ===========================================
+# Security & Configuration
+# ===========================================
+*.key
+*.pem
+*.crt
+*.p12
+*.pfx
+ssl/
+certs/
+private/
+private_key
+public_key
+ssh/
+.ssh/
+
+# ===========================================
+# Project Specific Customizations
+# ===========================================
+# Add any project-specific files to ignore here
+
+# Temporary files from document processing
+backend/data/temp_uploads/
+backend/data/processing/
+backend/data/processed/
+
+# Cache directories
+.cache/
+__pycache__/
+.pytest_cache/
+.mypy_cache/
+
+# Backup files
+*.bak
+*.backup
+*.old
+*.orig
+
+# Local development overrides
+local.py
+dev.py
+test_config.py
+docker-compose.override.yml
